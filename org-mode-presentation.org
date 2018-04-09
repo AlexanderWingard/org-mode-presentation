@@ -1,0 +1,39 @@
+* Settings
+#+BEGIN_SRC emacs-lisp
+  (setq org-adapt-indentation nil)
+  (setq org-agenda-files (list default-directory))
+
+  (global-set-key "\C-cl" 'org-store-link)
+  (global-set-key "\C-ca" 'org-agenda)
+  (global-set-key "\C-cc" 'org-capture)
+  (global-set-key "\C-cb" 'org-switchb)
+#+END_SRC
+
+#+RESULTS:
+: org-switchb
+
+* Titles
+** Subtitles
+*** Subsubtitles
+* Lists
+** Unordered
+ - Hello
+ - World
+** Ordered
+ 1. Hello
+ 2. World
+* Tables
+| What  |    $$ |
+|-------+-------|
+| Ice   |  3.00 |
+| Soda  |  6.49 |
+| Gin   |  4.99 |
+|-------+-------|
+| Total | 14.48 |
+#+TBLFM: @>$2=vsum(@I..@II)
+* Markup
+*bold*, /italic/, _underlined_, =verbatim= and ~code~, and, if you must, +strike-through+
+* TODOs
+** TODO Show TODO keyword
+** TODO Show how to toggle TODOs
+* Dates
