@@ -1,3 +1,4 @@
+* Headline
 * Settings
 #+BEGIN_SRC emacs-lisp
   (setq org-adapt-indentation nil)
@@ -19,6 +20,10 @@
 ** Unordered
  - Hello
  - World
+** Checkboxes
+ - [X] Tomatoes
+ - [ ] Cheese
+ - [ ] Lettuce
 ** Ordered
  1. Hello
  2. World
@@ -37,3 +42,23 @@
 ** TODO Show TODO keyword
 ** TODO Show how to toggle TODOs
 * Dates
+** Important meeting
+<2018-04-11 Ons>
+** Lunch with Malin
+<2018-04-13 Fre 12:00-13:00>
+** Walked the dog
+[2018-04-09 Mån]
+* Links
+[[*Ordered][Ordered]]
+* [#A] Priority
+* Tags								:alex:andrej:
+* Capture
+#+BEGIN_SRC emacs-lisp
+  (setq org-capture-templates
+   '(("t" "Todo" entry (file+headline buffer-file-name "Captured Tasks")
+          "* TODO %?\n%U")))
+#+END_SRC
+
+#+RESULTS:
+| t | Todo | entry | (file+headline buffer-file-name Captured Tasks) | * TODO %?\n%U |
+** Captured Tasks
